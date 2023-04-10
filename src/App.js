@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Input from "./components/Input";
+import Notes from "./components/Notes";
+import Header from "./components/Header";
+import "./style.css"
+
 
 function App() {
+  const [notes, setNotes] = useState([]);
+
+  function handleSubmit(input) {
+    setNotes((prev) => {
+      return [...prev, input];
+    });
+  }
+
+  function deleteNode(id) {
+    setNotes((prev) => {
+      return prev.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Input submit={handleSubmit} />
+      {notes.map((note, index) => {
+        return (
+          <Notes
+            title={note.title}
+            content={note.content}
+            id={index}
+            key={index}
+            onDelete={deleteNode}
+          />
+        );
+      })}
     </div>
   );
 }

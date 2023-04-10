@@ -1,0 +1,104 @@
+*{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+}
+#root{
+          background-color: rgba(244, 244, 159, 0.979);
+       
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+}
+.App{
+          text-align: center;
+          min-width: 450px;
+          min-height: 600px;
+          background-color: black;
+          margin-top: 5rem;
+          border-radius: 10px;
+          padding: 1rem 0;
+
+}
+.header{
+          font-size: 2rem;
+          font-family: "MV Boli";
+          font-weight: 900;
+          padding: .3rem .8rem;
+          background-color: #6ef;
+          width: 50%;
+          margin:2rem auto;
+          transform: rotate(5deg);
+          border-radius: 8px 4px 30px 8px;
+          color: black;
+}
+.forms{
+        
+          display: flex;
+          flex-direction: column;
+          gap: 1.4rem;
+          width: 70%;
+          margin: auto;
+          
+}
+input{
+          height: 40px;
+          text-indent: 10px; 
+          background-color: transparent; 
+          border: 0;
+          border-bottom: 2px dashed white; 
+          color: white;   
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+
+}
+input::placeholder{
+          color: white;
+}
+textarea{
+          padding: 1rem 0 0 1rem;
+          color: black;
+          letter-spacing: 1px;
+          font-size: 1.1rem;
+          height: 10rem;
+}
+textarea::placeholder{
+          color: black;
+   
+}
+.add--button{
+          background-color: #6ef;
+          font-size: 1.3rem;
+          font-weight: 800;
+          color: black;
+          width: 40%;
+          border-radius: 10px;
+}
+.notes{
+          
+          margin: auto;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 70%;
+          color: white;
+          font-size: .8rem;
+          font-family: monospace;
+          border-bottom:3px dashed #6ef;
+          margin-top: 20px;
+          padding: 10px;
+          overflow: scroll;
+
+}
+.delete--button{
+          padding: .3rem;
+          font-size: .8rem;
+          margin: 5px;
+          font-weight: 600;
+          margin-left: 40%;
+}
+.title{
+          display: flex;
+}
